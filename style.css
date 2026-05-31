@@ -16,9 +16,7 @@ body{
 
 
 }
-html{
-    scroll-behavior: smooth;
-}
+
 header{
     position:relative;
     padding:2em 0;
@@ -358,6 +356,119 @@ color:orangered;
     font-size:1rem;
     text-align:center;
  }
+ 
  .top{
     background-color:orangered;
+    font-size:40px;
+    padding:0.5rem;
+    position:fixed;
+    right:5%;
+    cursor:pointer;
+    bottom:8%;
  }
+ .top:hover{
+    transform:translateY(-.6rem);
+
+ }
+ .top .show{
+    bottom:8%;
+
+ }
+ @media only screen and(max-width:1050px){
+    .about-heading{
+        gap:0 2em;
+
+    }
+    .about-box .boxes{
+        gap:1em;
+    }
+    .box1-text .btn{
+        padding:9px;
+        font-size:15px;
+    } 
+    .left-box .heading{
+        font-size:2.5em;
+
+
+    }
+ }
+ @media only screen and(max-width:850px){
+    .nav-items{
+        position:absloute;
+        top:-1%;
+        left:0;
+        width:100%;
+        padding:5em 0em 2em 0;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        gap:0.9rem;
+        background-color:#000;
+        transition:0.5s;
+        z-index:-1;
+        transform:translateY(-100%);
+
+
+
+    }
+    .nav-item.open{
+        transform:translateY(0);
+    }
+    .item{
+        flex-direction:column;
+
+    }
+    .nav-menu{
+        display:block;
+        font-size:2em;
+    }
+    .boxes,.about-box{
+        grid-template-columns:repeat(2,1fr);
+    }
+     
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+    .footer-container{
+        grid-template-columns:repeat(3,1fr);
+    }
+ }
+ @media only screen and (max-width:660px){
+    .about-heading{
+        grid-template-columns:1fr;
+
+    }
+    .about .para{
+        grid-column:1;
+    }
+    .boxes,.about-box{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .navbar{
+        padding:2rem 2rem;
+    }
+    .heading{
+        font-size:3em;
+
+    }
+    .heading-1{
+        font-size:2em;
+
+    }
+}
+@media only screen and(max-width:480px){
+    .footer-container{
+        grid-template-columns:repeat(1,1fr);
+    }
+    .btn{
+        padding:9px;
+        font-size:15px;
+    }
+    .main{
+        width:90%;
+    }
+}
+
